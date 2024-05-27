@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FlatList, Image, StyleSheet, Text, View, ScrollView } from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Stack } from 'expo-router';
-import { Ionicons } from "@expo/vector-icons";
 import { Searchbar } from "react-native-paper";
 
 const Page = () => {
