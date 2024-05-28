@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-import { Link, useRouter } from 'expo-router';
+import { Text, Image, StyleSheet, Pressable } from 'react-native';
+import { useRouter } from 'expo-router';
 
 interface TourListProps {
   name: string;

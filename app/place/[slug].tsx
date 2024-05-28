@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
 const PlaceDetail = () => {
   const { slug } = useLocalSearchParams();
@@ -18,15 +18,17 @@ const PlaceDetail = () => {
   }, [slug]);
 
   if (!place) {
-    return <Text>Loading...</Text>;
+    return <Text>Mohon Tunggu</Text>;
   }
 
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: place.photo }} style={styles.image} />
-      <Text style={styles.name}>{place.name}</Text>
-      <Text style={styles.description}>{place.description}</Text>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Image source={{ uri: place.photo }} style={styles.image} />
+        <Text style={styles.name}>{place.name}</Text>
+        <Text style={styles.description}>{place.description}</Text>
+      </View>
+    </ScrollView>
   );
 };
 
